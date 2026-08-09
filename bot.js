@@ -1,6 +1,6 @@
-const API_KEY = process.env.8b0b67f5cff246dcbbb98035d6d91a0a;
-const TELEGRAM_TOKEN = process.env.8976318830:AAE8bEZSSxIUUmNg9bnePypQROz_LykVDxI;
-const TELEGRAM_CHAT_ID = process.env.8849331246;
+const API_KEY = process.env.TWELVE_DATA_API_KEY;
+const TELEGRAM_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 const TIMEFRAME = process.env.TIMEFRAME || '5m';
 
 function calculateSMA(data, period) {
