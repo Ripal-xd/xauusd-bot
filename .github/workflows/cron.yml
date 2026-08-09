@@ -23,6 +23,6 @@ jobs:
         env:
           TWELVE_DATA_API_KEY: ${{ secrets.8b0b67f5cff246dcbbb98035d6d91a0a }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.8976318830:AAE8bEZSSxIUUmNg9bnePypQROz_LykVDxI }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_CHAT_ID: ${{ secrets.8849331246 }}
           TIMEFRAME: '1h'
 
