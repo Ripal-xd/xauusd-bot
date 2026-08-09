@@ -1,0 +1,28 @@
+name: XAUUSD Signal Scanner
+
+on:
+  schedule:
+    # Berjalan otomatis setiap 15 menit
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+jobs:
+  scan-market:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Scan Script
+        run: node bot.js
+        env:
+          TWELVE_DATA_API_KEY: ${{ secrets.TWELVE_DATA_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TIMEFRAME: '1h'
+
